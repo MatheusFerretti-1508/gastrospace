@@ -1,9 +1,16 @@
+import Footer from "./containers/Footer"
+import Header from "./containers/Header"
+import RestaurantsList from "./containers/RestaurantsList"
+import { GlobalStyle } from "./styles"
 
 function App() {
 
   return (
     <>
-      <h1>A Juliana me ama</h1>
+      <GlobalStyle />
+        <Header />
+        <RestaurantsList />
+        <Footer />
     </>
   )
 }
