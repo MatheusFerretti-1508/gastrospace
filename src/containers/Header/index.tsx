@@ -1,5 +1,4 @@
 import { HeaderContainer, HeaderContent, Logo, Slogan } from "./styles"
-import LogoImg from '../../assets/images/logo.png'
 
 const Header = () => {
 
@@ -7,7 +6,7 @@ const Header = () => {
         <>
             <HeaderContainer>   
                 <HeaderContent className="container">
-                    <Logo src={LogoImg} />
+                    <Logo to={'/'} />
                     <Slogan>
                     Viva experiências gastronômicas no conforto da sua casa
                     </Slogan>

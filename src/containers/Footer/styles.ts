@@ -25,12 +25,13 @@ export const SocialLinks = styled.div`
     display: flex;
     padding-top: 32px;
     padding-bottom: 80px;
-
+    
     img {
         margin-right: 8px;
         margin-left: 8px;
         height: 24px;
         width: 24px;
+        cursor: pointer;
     }
 
     &:last-child{
