@@ -1,4 +1,4 @@
-import { CardF, ShopButton } from "./styles"
+import { CardF, DetailsButton } from "./styles"
 import PizzaMarguerita from '../../assets/images/pizza-marguerita.png'
 
 const FoodCard = () => {
@@ -11,7 +11,7 @@ const FoodCard = () => {
                 <p>
                 A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!
                 </p>
-                <ShopButton type="button">Adicionar ao carrinho</ShopButton>
+                <DetailsButton type="button">Mais detalhes</DetailsButton>
             </CardF>
         </>
     )

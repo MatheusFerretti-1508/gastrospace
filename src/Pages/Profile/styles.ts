@@ -1,5 +1,25 @@
-import { styled } from "styled-components";
-import { cores } from "../../styles";
+import styled from "styled-components"
+import { cores } from "../../styles"
+
+export const ProfileContainer = styled.div`
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 259%;
+        background-color: rgba(0,0,0,0.73);
+    }
+`
+
+export const FoodsListContainer = styled.div`
+    padding: 56px 0px 120px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+    position: relative;
+`
 
 
 export const CardF = styled.div`

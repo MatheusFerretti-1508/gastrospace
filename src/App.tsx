@@ -1,6 +1,6 @@
 import Footer from "./containers/Footer"
 import Header from "./containers/Header"
-import Profile from "./containers/Profile"
+import Profile from "./Pages/Profile"
 import RestaurantsList from "./containers/RestaurantsList"
 import { GlobalStyle } from "./styles"
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
