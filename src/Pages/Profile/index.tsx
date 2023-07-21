@@ -9,7 +9,6 @@ import Modal from "../../components/Modal"
 
 const Profile = () => {
     const [modal, setModal] = useState(false)
-    const [isModalOn, setIsModalOn] = useState(false)
 
     return (
         <ProfileContainer>
@@ -24,7 +23,7 @@ const Profile = () => {
                             <p>
                                 A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!
                             </p>
-                            <DetailsButton onClick={() => setModal(true) && setIsModalOn(true)} type="button" type="button">Mais detalhes</DetailsButton>
+                            <DetailsButton onClick={() => setModal(true)} type="button">Mais detalhes</DetailsButton>
                         </CardF>
                         <CardF>
                             <img src={PizzaMarguerita} alt="" />
@@ -32,7 +31,7 @@ const Profile = () => {
                             <p>
                                 A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!
                             </p>
-                            <DetailsButton onClick={() => setModal(true) && setIsModalOn(true)} type="button" type="button">Mais detalhes</DetailsButton>
+                            <DetailsButton onClick={() => setModal(true)} type="button">Mais detalhes</DetailsButton>
                         </CardF>
                         <CardF>
                             <img src={PizzaMarguerita} alt="" />
@@ -40,7 +39,7 @@ const Profile = () => {
                             <p>
                                 A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!
                             </p>
-                            <DetailsButton onClick={() => setModal(true) && setIsModalOn(true)} type="button" type="button">Mais detalhes</DetailsButton>
+                            <DetailsButton onClick={() => setModal(true)} type="button">Mais detalhes</DetailsButton>
                         </CardF>
                         <CardF>
                             <img src={PizzaMarguerita} alt="" />
@@ -48,7 +47,7 @@ const Profile = () => {
                             <p>
                                 A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!
                             </p>
-                            <DetailsButton onClick={() => setModal(true) && setIsModalOn(true)} type="button" type="button">Mais detalhes</DetailsButton>
+                            <DetailsButton onClick={() => setModal(true)} type="button">Mais detalhes</DetailsButton>
                         </CardF>
                         <CardF>
                             <img src={PizzaMarguerita} alt="" />
@@ -56,7 +55,7 @@ const Profile = () => {
                             <p>
                                 A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!
                             </p>
-                            <DetailsButton onClick={() => setModal(true) && setIsModalOn(true)} type="button" type="button">Mais detalhes</DetailsButton>
+                            <DetailsButton onClick={() => setModal(true)} type="button">Mais detalhes</DetailsButton>
                         </CardF>
                         <CardF>
                             <img src={PizzaMarguerita} alt="" />
@@ -64,7 +63,7 @@ const Profile = () => {
                             <p>
                                 A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!
                             </p>
-                            <DetailsButton onClick={() => setModal(true) && setIsModalOn(true)} type="button">Mais detalhes</DetailsButton>
+                            <DetailsButton onClick={() => setModal(true)} type="button">Mais detalhes</DetailsButton>
                         </CardF>
                         {modal ? (
                             <Modal />
