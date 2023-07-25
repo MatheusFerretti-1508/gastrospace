@@ -6,6 +6,7 @@ import Footer from "../Footer"
 import { FoodsListContainer, HeroContainer, ProfileContainer, RestaurantName, Role, HeroContent, CardF, DetailsButton } from "./styles"
 import { Restaurant } from "../../components/RestaurantCard"
 import Modal from "../../components/Modal"
+import Cart from "../../components/Cart"
 
 type Props = {
     restaurante?: Restaurant
@@ -79,6 +80,7 @@ const Profile = ({ restaurante }: Props) => {
                             })} className="overlay"></div>
                         </>
                     ) : ''}
+                    <Cart />
                 </div>
             </ProfileContainer>
         </>
