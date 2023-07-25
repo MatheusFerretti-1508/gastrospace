@@ -1,14 +1,20 @@
 import { HeroContainer, HeroContent, RestaurantName, Role } from "./styles"
+import { Restaurant } from "../RestaurantCard"
 
-const Hero = () => {
+export type Props = {
+    restaurant?: Restaurant
+}
+const Hero = ({restaurant}: Props) => {
 
     return (
-        <HeroContainer>
+        <>
+        <HeroContainer style={{backgroundImage: `url(${restaurant!.capa})`}}>
             <HeroContent className="container">
-                <Role>Italiana</Role>
-                <RestaurantName>La Dolce Vita Trattoria</RestaurantName>
+                <Role>{restaurant?.avaliacao}</Role>
+                <RestaurantName>{restaurant?.titulo}</RestaurantName>
             </HeroContent>
         </HeroContainer>
+        </>
     )
 }
 

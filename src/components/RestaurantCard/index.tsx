@@ -1,36 +1,75 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
 import { AllInfo, ButtonMore, CardR, ContainerTags, MainInfo, RestDescription, Tag } from "./styles"
 import Estrela from '../../assets/images/estrela.png'
 
-type Props = {
-    title: string,
-    score: string,
-    description: string,
-    tags: string[],
-    image: string,
+
+
+export type Restaurant = {
+    id: number,
+    titulo: string,
+    destacado: boolean,
+    tipo: string,
+    avaliacao: number,
+    descricao: string,
+    capa: string,
+    cardapio: [
+        {
+        foto: string,
+        preco: number,
+        id: number,
+        nome: string,
+        descricao: string,
+        porcao: string
+    }
+]
 }
 
-const RestaurantCard = ({tags, title, description, score, image}: Props) => {
+export type Menu = {
+    foto: string,
+    preco: number,
+    id: number,
+    nome: string,
+    descricao: string,
+    porcao: string
+}
+
+type Props = {
+    id: number,
+    titulo: string,
+    destacado: boolean,
+    tipo: string,
+    avaliacao: number,
+    descricao: string,
+    capa: string,
+    to?: string
+}
+
+const RestaurantCard = ({avaliacao, capa, descricao, destacado, id, tipo, titulo, to}: Props) => {
 
     return (
         <>
-            <CardR>
-                <img src={image} alt="Nome do Restaurante" />
-                <ContainerTags>
-                    {tags.map((tag) => <Tag>{tag}</Tag>)}
-                </ContainerTags>
-                <AllInfo>
-                    <MainInfo>
-                        <h3>{title}</h3>
-                        <div>
-                            <p>{score}</p> <img src={Estrela} alt="" />
-                        </div>
-                    </MainInfo>
-                    <RestDescription>
-                    {description}
-                    </RestDescription>
-                    <ButtonMore to={'/restaurante'}>Saiba mais</ButtonMore>
-                </AllInfo>
-            </CardR>
+        <CardR key={id}>
+            <img src={capa} alt="Nome do Restaurante" />
+            <ContainerTags>
+                <Tag>{tipo}</Tag>
+                {destacado ? (
+                    <Tag>Destaque da semana</Tag>
+                ) : ''}
+            </ContainerTags>
+            <AllInfo>
+                <MainInfo>
+                    <h3>{titulo}</h3>
+                    <div>
+                        <p>{avaliacao}</p> <img src={Estrela} alt="" />
+                    </div>
+                </MainInfo>
+                <RestDescription>
+                {descricao}
+                </RestDescription>
+                <ButtonMore to={to as string}>Saiba mais</ButtonMore>
+            </AllInfo>
+        </CardR>
         </>
     )
 }

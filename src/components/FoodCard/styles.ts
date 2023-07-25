@@ -3,8 +3,8 @@ import { cores } from "../../styles";
 
 
 export const CardF = styled.div`
-    width: 320px;
-    height: 340px;
+    /* width: 320px;
+    height: 340px; */
     padding: 8px;
     background-color: ${cores.corDoTexto};
     color: #fff;
@@ -20,6 +20,12 @@ export const CardF = styled.div`
         font-weight: light;
         line-height: 22px;
         padding-bottom: 8px;
+    }
+
+    img {
+        width: 304px;
+        height: 167px;
+        object-fit: cover;
     }
 `
 

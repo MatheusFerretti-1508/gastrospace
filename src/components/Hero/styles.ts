@@ -1,12 +1,14 @@
 import { styled } from "styled-components";
-import HeroBackImg from '../../assets/images/ItalianHero.png'
+
 
 export const HeroContainer = styled.div`
-    padding: 24px 0px 32px 0px;
+    padding: 0px 0px 0px 0px;
     height: 280px;
+    /* background-image:  */
     background-color: #12a;
-    background-image: url(${HeroBackImg});
     position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     &::before {
         position: absolute;
@@ -18,6 +20,11 @@ export const HeroContainer = styled.div`
         opacity: .5;
 
         content: '';
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
     }
 `   
 
@@ -31,11 +38,15 @@ export const HeroContent = styled.div`
 `
 
 export const Role = styled.p`
+    display: flex;
     font-size: 32px;
     font-weight: 100;
+    padding-top: 24px;
 `
 
 export const RestaurantName = styled.p`
+    display: flex;
     font-size: 32px;
     font-weight: bold;
+    padding-bottom: 32px;
 `

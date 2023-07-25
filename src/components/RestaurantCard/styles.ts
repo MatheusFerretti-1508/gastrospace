@@ -4,9 +4,14 @@ import { Link } from "react-router-dom";
 
 export const CardR = styled.div`
     width: 472px;
-    /* height: 398px; */
     color: ${cores.corDoTexto};
     position: relative;
+
+    img {
+        width: 472px;
+        height: 217px;
+        object-fit: cover;
+    }
 `
 
 export const AllInfo = styled.div`

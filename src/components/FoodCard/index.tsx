@@ -1,15 +1,20 @@
 import { CardF, DetailsButton } from "./styles"
-import PizzaMarguerita from '../../assets/images/pizza-marguerita.png'
 
-const FoodCard = () => {
+type Props = {
+    foto: string,
+    nome: string,
+    descricao: string,
+}
+
+const FoodCard = ({descricao, foto, nome}:Props) => {
 
     return (
         <>
             <CardF>
-                <img src={PizzaMarguerita} alt="" />
-                <h3>Pizza Marguerita</h3>
+                <img src={foto} alt="" />
+                <h3>{nome}</h3>
                 <p>
-                A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!
+                {descricao}
                 </p>
                 <DetailsButton type="button">Mais detalhes</DetailsButton>
             </CardF>

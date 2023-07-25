@@ -12,6 +12,7 @@ export const ModalContainer = styled.div`
     height: 344px;
     bottom: 490px;
     z-index: 2;
+    top: 20%;
 
     img {
         height: 280px;

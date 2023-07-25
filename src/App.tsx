@@ -1,35 +1,64 @@
-import Footer from "./containers/Footer"
-import Header from "./containers/Header"
-import Profile from "./Pages/Profile"
-import RestaurantsList from "./containers/RestaurantsList"
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
+import { BrowserRouter } from 'react-router-dom'
 import { GlobalStyle } from "./styles"
-import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import Rotas from './routes'
+import { Provider } from 'react-redux'
+import { store } from './store'
 
 function App() {
 
-  const routes = createBrowserRouter([
-    {
-      path: '/',
-      element: (
-        <>
-        <Header />
-        <RestaurantsList />
-        <Footer />
-        </>
-      )
-    },
-    {
-      path: '/restaurante',
-      element: (
-        <Profile />
-      )
-    }
-  ])
+  // const routes = createBrowserRouter([
+  //   {
+  //     path: '/',
+  //     element: (
+  //       <Home />
+  //     )
+  //   },
+  //   {
+  //     path: `/restaurante/1`,
+  //     // path: '/restaurante',
+  //     element: (
+  //       <Profile />
+  //     )
+  //   },
+  //   {
+  //     path: `/restaurante/2`,
+  //     // path: '/restaurante',
+  //     element: (
+  //       <Profile />
+  //     )
+  //   },
+  //   {
+  //     path: `/restaurante/3`,
+  //     // path: '/restaurante',
+  //     element: (
+  //       <Profile />
+  //     )
+  //   },
+  //   {
+  //     path: `/restaurante/4`,
+  //     // path: '/restaurante',
+  //     element: (
+  //       <Profile />
+  //     )
+  //   },
+  //   {
+  //     path: `/restaurante/5`,
+  //     // path: '/restaurante',
+  //     element: (
+  //       <Profile />
+  //     )
+  //   }
+  // ])
 
   return (
     <>
-      <GlobalStyle />
-        <RouterProvider router={routes} />
+      <Provider store={store}>
+        <BrowserRouter>
+            <GlobalStyle />
+            <Rotas />
+        </BrowserRouter>
+      </Provider>
     </>
   )
 }
