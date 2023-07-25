@@ -1,6 +1,5 @@
 import RestaurantCard, { Restaurant } from "../../components/RestaurantCard"
 import { ContainerRestsList } from "./styles"
-import { useGetRestaurantsQuery } from "../../services/api"
 
 type Props = {
     restaurantes?: Restaurant[]

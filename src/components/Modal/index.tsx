@@ -1,5 +1,4 @@
 import { ModalContainer, ButtonShop, ModalWrittenContent } from "./styles"
-import PizzaModalImg from '../../assets/images/pizzaModal.png'
 
 export type Props = {
     foto: string,
