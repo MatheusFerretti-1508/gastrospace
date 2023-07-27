@@ -1,42 +1,41 @@
 import PizzaImg from '../../assets/images/pizza-marguerita.png'
 import lixeiraImg from '../../assets/images/lixeira-de-reciclagem 1.png'
 import { CartContainer, CartItem, CartInfos } from './styles'
+import { useDispatch, useSelector } from 'react-redux'
+import { RootReducer } from '../../store'
+import { Menu } from '../RestaurantCard'
 
 const Cart = () => {
+    const {itens} = useSelector((state: RootReducer) => state.cart)
+
+    const precoTotal = (items: Menu[]) => {
+        return items.reduce((accumulator, currentItem) => {
+            if (currentItem.preco) {
+                return (accumulator += currentItem.preco)
+            }
+            return 0
+        }, 0)
+    }
 
     return (
         <CartContainer>
-            <CartItem>
-                <img src={PizzaImg} alt="" />
+            {itens.map((item) => (
+                <CartItem key={item.id}>
+                <img src={item.foto} alt="" />
                 <div>
-                    <h4>Pizza Margueritta</h4>
-                    <p>R$ 60,00</p>
+                    <h4>{item.nome}</h4>
+                    <p>R$ {item.preco}</p>
                 </div>
                 <img src={lixeiraImg} alt="" />
-            </CartItem>
-            <CartItem>
-                <img src={PizzaImg} alt="" />
-                <div>
-                    <h4>Pizza Margueritta</h4>
-                    <p>R$ 60,00</p>
-                </div>
-                <img src={lixeiraImg} alt="" />
-            </CartItem>
-            <CartItem>
-                <img src={PizzaImg} alt="" />
-                <div>
-                    <h4>Pizza Margueritta</h4>
-                    <p>R$ 60,00</p>
-                </div>
-                <img src={lixeiraImg} alt="" />
-            </CartItem>
+                </CartItem>
+            ))}
             <CartInfos>
                 <div>
                     <p>
                         Valor total
                     </p>
                     <p>
-                        R$ 140,00
+                        R$ {precoTotal(itens)}
                     </p>
                 </div>
                 <button>Continuar com a entrega</button>

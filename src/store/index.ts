@@ -1,11 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 import olaReducer from './reducers/ola'
+import cartReducer from './reducers/cart'
 
 import api from '../services/api'
 
-export const store: any = configureStore({
+export const store = configureStore({
     reducer: {
-        ola: olaReducer,
+        cart: cartReducer,
         [api.reducerPath]: api.reducer
     },
     middleware: (getDefaultMiddleware) =>

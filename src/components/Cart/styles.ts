@@ -10,6 +10,7 @@ export const CartContainer = styled.div`
     width: 360px;
     height: 100%;
     background-color: ${cores.corDoTexto};
+    z-index: 2;
 `
 
 export const CartItem = styled.div`
