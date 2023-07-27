@@ -1,5 +1,4 @@
 import { configureStore } from '@reduxjs/toolkit'
-import olaReducer from './reducers/ola'
 import cartReducer from './reducers/cart'
 
 import api from '../services/api'

@@ -1,7 +1,6 @@
-import PizzaImg from '../../assets/images/pizza-marguerita.png'
 import lixeiraImg from '../../assets/images/lixeira-de-reciclagem 1.png'
 import { CartContainer, CartItem, CartInfos } from './styles'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { RootReducer } from '../../store'
 import { Menu } from '../RestaurantCard'
 
