@@ -7,7 +7,8 @@ import { FoodsListContainer, HeroContainer, ProfileContainer, RestaurantName, Ro
 import { Restaurant } from "../../components/RestaurantCard"
 import Modal from "../../components/Modal"
 import Cart from "../../components/Cart"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
+import { RootReducer } from '../../store'
 import { add } from "../../store/reducers/cart"
 import { Menu } from "../../components/RestaurantCard";
 
@@ -27,6 +28,7 @@ const Profile = ({ restaurante }: Props) => {
     })
     const [isCartVisible, setIsCartVisible] = useState(false)
     const dispatch = useDispatch()
+    const {itens} = useSelector((state: RootReducer) => state.cart)
 
     const AddToCart = (prato: Menu) => {
         dispatch(add(prato))
@@ -42,7 +44,7 @@ const Profile = ({ restaurante }: Props) => {
                             <HeaderRowContent>
                                 <HeaderText>Restaurantes</HeaderText>
                                 <Logo to={'/'} />
-                                <HeaderText onClick={() => setIsCartVisible(true)}>0 produto(s) no carrinho</HeaderText>
+                                <HeaderText onClick={() => setIsCartVisible(true)}>{itens.length} produto(s) no carrinho</HeaderText>
                             </HeaderRowContent>
                         </HeaderContent>
                     </HeaderContainer>
