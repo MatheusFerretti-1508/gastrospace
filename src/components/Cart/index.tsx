@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { RootReducer } from '../../store'
 import { Menu } from '../RestaurantCard'
 
-const Cart = () => {
+const Cart = () => { 
     const {itens} = useSelector((state: RootReducer) => state.cart)
 
     const precoTotal = (items: Menu[]) => {

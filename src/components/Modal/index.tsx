@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/ban-types */
 import { ModalContainer, ButtonShop, ModalWrittenContent } from "./styles"
@@ -8,7 +9,7 @@ export type Props = {
     descricaoPrato: string,
     porcao: string,
     preco: number,
-    aoClicar: void,
+    aoClicar: any,
     id: number
 }
 

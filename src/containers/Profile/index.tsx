@@ -13,10 +13,9 @@ import { Menu } from "../../components/RestaurantCard";
 
 type Props = {
     restaurante?: Restaurant
-    prato: Menu
 }
 
-const Profile = ({ restaurante, prato }: Props) => {
+const Profile = ({ restaurante }: Props) => {
     const [modal, setModal] = useState({
         isVisible: false,
         descricao: '',
