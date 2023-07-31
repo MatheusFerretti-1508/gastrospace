@@ -21,9 +21,12 @@ const cartSlice = createSlice({
             if (!prato) {
                 state.itens.push(action.payload)
             }
+        },
+        clear: (state) => {
+            state.itens = []
         }
     }
 })
 
-export const {add} = cartSlice.actions
+export const {add, clear} = cartSlice.actions
 export default cartSlice.reducer

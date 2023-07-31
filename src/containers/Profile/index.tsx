@@ -30,6 +30,7 @@ const Profile = ({ restaurante }: Props) => {
     const dispatch = useDispatch()
     const {itens} = useSelector((state: RootReducer) => state.cart)
 
+
     const AddToCart = (prato: Menu) => {
         dispatch(add(prato))
         // console.log('oi')
@@ -54,9 +55,7 @@ const Profile = ({ restaurante }: Props) => {
                             <RestaurantName>{restaurante?.titulo}</RestaurantName>
                         </HeroContent>
                     </HeroContainer>
-                    {/* <Hero restaurant={restaurante}/> */}
                     <div className="container">
-                        {/* <FoodsList pratos={restaurante?.cardapio} /> */}
                         <FoodsListContainer>
                             {restaurante?.cardapio.map((prato) => (
                                 <>
@@ -107,7 +106,7 @@ const Profile = ({ restaurante }: Props) => {
                     ) : ''}
                     {isCartVisible && (
                         <>
-                            <Cart />
+                            <Cart/>
                             <div onClick={() => setIsCartVisible(false) } className="overlay"></div>
                         </>
                     )}
