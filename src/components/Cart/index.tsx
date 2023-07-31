@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-floating-promises */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -17,7 +18,7 @@ import { clear } from '../../store/reducers/cart'
 
 const Cart = () => { 
     const {itens} = useSelector((state: RootReducer) => state.cart)
-    const [purchase, { data, isSuccess, isLoading }] = usePurchaseMutation()
+    const [purchase, { isSuccess }] = usePurchaseMutation()
 
     const [isCartVisible, setIsCartVisible] = useState(true)
     const [isLocationInfoVisible, setIsLocationInfoVisible] = useState(false)
