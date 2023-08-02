@@ -10,7 +10,7 @@ export type Props = {
     descricaoPrato: string,
     porcao: string,
     preco: number,
-    aoClicar: any,
+    aoClicar: Function,
     id: number
 }
 

@@ -83,7 +83,7 @@ const Profile = ({ restaurante }: Props) => {
                                             nomePrato={modal.nome}
                                             porcao={modal.porcao}
                                             preco={modal.preco}
-                                            aoClicar={AddToCart(modal)}
+                                            aoClicar={() => AddToCart(modal)}
                                         />
                                     ) : ''}
                                 </>
