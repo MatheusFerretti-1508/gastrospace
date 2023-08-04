@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import { cores } from "../../styles";
 import { Link } from "react-router-dom";
+import lixeiraImg from '../../assets/images/lixeira-de-reciclagem 1.png'
 
 
 export const CartContainer = styled.div`
@@ -50,6 +51,17 @@ export const CartItem = styled.div`
         cursor: pointer;
     }
 `
+
+// export const BotaoRemover = styled.button`
+//         background-image: url(${lixeiraImg});
+//         background: url(${lixeiraImg});
+//         width: 16px;
+//         height: 16px;
+//         position: absolute;
+//         bottom: 8px;
+//         right: 0px;
+//         cursor: pointer;
+// `
 
 export const CartInfos = styled.div`
 

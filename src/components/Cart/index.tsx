@@ -13,7 +13,7 @@ import { Menu } from '../RestaurantCard'
 import { usePurchaseMutation } from '../../services/api'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
-import { clear } from '../../store/reducers/cart'
+import { clear, remove } from '../../store/reducers/cart'
 
 
 const Cart = () => { 
@@ -154,7 +154,7 @@ const Cart = () => {
                         <h4>{item.nome}</h4>
                         <p>R$ {item.preco}</p>
                     </div>
-                    <img src={lixeiraImg} alt="" />
+                    <img onClick={() => dispatch(remove(item.id))} src={lixeiraImg} alt="" />
                     </CartItem>
                 ))}
                 <CartInfos>
@@ -163,7 +163,7 @@ const Cart = () => {
                             Valor total
                         </p>
                         <p>
-                            R$ {precoTotal(itens)}
+                            R$ {precoTotal(itens).toFixed(2)}
                         </p>
                     </div>
                     <button onClick={() => {setIsCartVisible(false), setIsLocationInfoVisible(true)}} type='button'>Continuar com a entrega</button>
@@ -211,7 +211,7 @@ const Cart = () => {
                                         </div>
                                         <div>
                                             <label htmlFor="numero">Número</label>
-                                            <input required type="text" id="numero" name='numero'
+                                            <input required={true} type="text" id="numero" name='numero'
                                             value={form.values.numero}
                                             onChange={form.handleChange}
                                             onBlur={form.handleBlur} />
@@ -224,7 +224,7 @@ const Cart = () => {
                                         onChange={form.handleChange}
                                         onBlur={form.handleBlur} />
                                         <small>{getErrorMessage('complemento', form.errors.receptor)}</small>
-                                        <button onClick={() => {setIsBuyInfoVisible(true), setIsLocationInfoVisible(false)}} type="button">Continuar com o pagamento</button>
+                                        <button onClick={() => {setIsBuyInfoVisible(true), setIsLocationInfoVisible(false)}} type="submit">Continuar com o pagamento</button>
                                 </FormInfos>
                                 <VoltaCarrinho onClick={() => {setIsCartVisible(true), setIsLocationInfoVisible(false)}} type="button">Voltar para o carrinho</VoltaCarrinho>
                             </BuyFormContainer>
