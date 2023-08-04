@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import { cores } from "../../styles";
 import { Link } from "react-router-dom";
-import lixeiraImg from '../../assets/images/lixeira-de-reciclagem 1.png'
+
 
 
 export const CartContainer = styled.div`
